@@ -1,10 +1,12 @@
-﻿namespace Day13AssigimentGeneric
+﻿using static Day13AssigimentGeneric.GenericMethod2;
+
+namespace Day13AssigimentGeneric
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" chooes number\n1. Find integer maximum number among 3 numbers\n2.using float number\n3.using string value\n4.using refactor 1");
+            Console.WriteLine(" chooes number\n1. Find integer maximum number among 3 numbers\n2.using float number\n3.using string value\n4.using refactor 1\n5.using refactor 2");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -31,6 +33,14 @@
                     Console.WriteLine("Maximum Integer value is " + value1);
                     Console.WriteLine("Maximum float value is " + value2);
                     Console.WriteLine("Maximum string is " + value3);
+                    break;
+                case 5:
+                    GenericMaximum<int> genericMaximum1 = new GenericMaximum<int>(112, 275, 30);
+                    GenericMaximum<float> genericMaximum2 = new GenericMaximum<float>(55.46f, 98.43f, 102.3f);
+                    GenericMaximum<string> genericMaximum3 = new GenericMaximum<string>("Apple", "Banana", "Peach");
+                    Console.WriteLine("Maximum Integer value is " + genericMaximum1.MaxMethod());
+                    Console.WriteLine("Maximum float value is " + genericMaximum2.MaxMethod());
+                    Console.WriteLine("Maximum string is " + genericMaximum3.MaxMethod());
                     break;
             }
         }
