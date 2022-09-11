@@ -6,7 +6,7 @@ namespace Day13AssigimentGeneric
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" chooes number\n1. Find integer maximum number among 3 numbers\n2.using float number\n3.using string value\n4.using refactor 1\n5.using refactor 2");
+            Console.WriteLine(" chooes number\n1. Find integer maximum number among 3 numbers\n2.using float number\n3.using string value\n4.using refactor 1\n5.using refactor 2\n6.using arry");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -41,6 +41,11 @@ namespace Day13AssigimentGeneric
                     Console.WriteLine("Maximum Integer value is " + genericMaximum1.MaxMethod());
                     Console.WriteLine("Maximum float value is " + genericMaximum2.MaxMethod());
                     Console.WriteLine("Maximum string is " + genericMaximum3.MaxMethod());
+                    break;
+                case 6:
+                    int[] arr = { 112, 344, 432, 555, 678 };
+                    Maximum_Number obj = new Maximum_Number(arr);
+                    obj.PrintMaxValue();
                     break;
             }
         }
