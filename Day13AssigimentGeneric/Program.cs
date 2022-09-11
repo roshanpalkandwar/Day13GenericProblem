@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" chooes number\n1. Find integer maximum number among 3 numbers\n2.using float number");
+            Console.WriteLine(" chooes number\n1. Find integer maximum number among 3 numbers\n2.using float number\n3.using string value");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -17,6 +17,11 @@
                     FloatNumber floatMaximumNumber = new FloatNumber();
                     float floatValue = floatMaximumNumber.PrintFloatMaximumNumber(88.5f,100.9f, 125.07f);
                     Console.WriteLine("Maximum number of float is " + floatValue);
+                    break;
+                case 3:
+                  StringValue maximumString = new StringValue();
+                    string strvalue = maximumString.PrintMaximumString("Apple", "Banana", "Peach");
+                    Console.WriteLine("Maximum string is " + strvalue);
                     break;
             }
         }
